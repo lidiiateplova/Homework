@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.tableOfStudent {
+  margin: 20px;
+  border-collapse: collapse;
+  background-color: #eee4f7;
+  font-family: 'Montserrat', sans-serif;
+  width: 60%;
+}
+.tableOfStudent th {
+  background-color: #b988f7;
+}
+.tableOfStudent .x {
+  background-color: #f71c54;
+}
+
+
+.tableOfStudent .badGpa {
+  background-color: #f71c54;
+  color: white;
+}
+.tableOfStudent .normGpa {
+  background-color: #ed7c21;
+  color: white;
+}
+.tableOfStudent .goodGpa {
+  background-color: #00cc00;
+  color: white;
+}
+.tableOfStudent .badGpaOnly {
+  display: none;
+}
+.tableOfStudent .normGpaOnly {
+  display: none;
+}
+.tableOfStudent .goodGpaOnly {
+  display: none;
+}
+
+.tableOfStudent .searchFullName {
+  background-color: #b988f7;
+  color: white;
+}
+.delete {
+  border: 2px solid #b988f7;
+  text-align: center;
+  background-color: #eee4f7;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin: 4px;
+  font-size: 20px;
+}
+.delete .yes {
+  background-color: #00cc00;
+  color: white;
+  font-size: 14px;
+}
+.delete .no {
+  background-color: red;
+  color: white;
+  font-size: 14px;
+}

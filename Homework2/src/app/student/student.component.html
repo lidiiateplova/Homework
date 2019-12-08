@@ -1,0 +1,83 @@
+<div>
+  <h1>Таблица студентов</h1>
+
+  <!--  Найти по имени и(или) фамилии-->
+  <div>Для того, чтобы найти студента,<br>введите в поле ниже фамилию или(и) имя<br>
+    <input type="text" name="fullName"
+           placeholder="Введите фамилию/имя"
+           [(ngModel)]="searchStudent"
+    >
+  </div>
+  <p>Так же можно отдельно посмотреть студентов,<br>в зависимости от их успеваемости</p>
+  <!--  Показать плохую успеваемость-->
+  <div>
+    <input type="checkbox" name="bad" [(ngModel)]="checkedBad">
+    Выделить красным, у кого плохой средний балл (меньше 3)
+  </div>
+  <div>
+    <input type="checkbox" name="norm" [(ngModel)]="checkedNorm">
+    Выделить оранжевым, у кого удовлетворительный средний балл (3)
+  </div>
+  <div>
+    <input type="checkbox" name="good" [(ngModel)]="checkedGood">
+    Выделить зеленым, у кого хороший средний балл (больше 3)
+  </div>
+  <!--  Показать плохую успеваемость-->
+  <div>
+    <input type="checkbox" name="badGpa" [(ngModel)]="checkedBadHidden">
+    Показать только тех, у кого средний балл ниже 3
+  </div>
+  <!--  Показать хорошую успеваемость-->
+  <div>
+    <input type="checkbox" name="normGpa" [(ngModel)]="checkedNormHidden">
+    Показать только тех, у кого средний балл 3
+  </div>
+  <div>
+    <input type="checkbox" name="goodGpa" [(ngModel)]="checkedGoodHidden">
+    Показать только тех, у кого средний балл выше 3
+  </div>
+
+
+  <table border="1" class="tableOfStudent">
+    <tr>
+      <th></th>
+      <th (click)="mySort('surname')">Фамилия</th>
+      <th (click)="mySort('name')">Имя</th>
+      <th (click)="mySort('patronymic')">Отчество</th>
+      <th (click)="mySort('dateOfBirth')">Дата рождения</th>
+      <th (click)="mySort('gpa')">Средний балл</th>
+      <th></th>
+    </tr>
+    <tr
+      *ngFor="let student of students; let i = index"
+      [ngClass]="{
+            badGpa: (student.gpa < 3 && checkedBad),
+            normGpa: (student.gpa === 3 && checkedNorm),
+            goodGpa: (student.gpa > 3 && checkedGood),
+            badGpaOnly: (student.gpa >= 3 && checkedBadHidden),
+            normGpaOnly: (student.gpa !== 3 && checkedNormHidden),
+            goodGpaOnly: (student.gpa <= 3 && checkedGoodHidden),
+            searchFullName: search(student)
+            }"
+    >
+      <td>{{ i + 1 }}</td>
+      <td>{{ student.surname }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.patronymic }}</td>
+      <td>{{ student.dateOfBirth | date }}</td>
+      <td>{{ student.gpa }}</td>
+      <td>
+        <button class="x" (click)="openPopUp(i)">х</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="delete" *ngIf="isOpenPopUp" >
+  <span>Удалить студента?</span>
+  <div>
+    <button class="yes" (click)="isClickedDelete(true)">Да</button>
+    <button class="no" (click)="isClickedDelete(false)">Нет</button>
+  </div>
+</div>
+
