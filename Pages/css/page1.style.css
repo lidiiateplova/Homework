@@ -1,0 +1,63 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background: linear-gradient(to right, skyblue -50%, purple 150%);
+}
+
+p {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+/*Оформление формы*/
+.enterPage{
+    border: rgba(25, 73, 120, 0.5) solid 2px;
+    width: 300px;
+    height: 260px;
+    padding: 30px 0 0 50px;
+    margin: 80px auto 0 auto;
+    background: white;
+    font-size: 30px;
+}
+/*Оформление ссылки*/
+a {
+    color: white;
+    text-decoration: none;
+}
+.eInput {
+    padding: 10px;
+}
+/*Оформление полей ввода логина и пароля*/
+input {
+    width: 220px;
+    height: 20px;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+}
+input:hover {
+    box-shadow: 0 0 6px 4px lightgrey;
+}
+input:focus {
+    box-shadow: 0 0 6px 4px lightskyblue;
+}
+.button {
+    padding: 7px;
+    margin: 10px 0 0 150px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(28, 84, 133, 0.5);
+}
+.button:hover {
+    background: rgb(34, 115, 185);
+    box-shadow: 0 0 6px 4px rgb(41, 141, 225);
+    transition: 0.7s;
+}
+.button:active {
+    background: white;
+    box-shadow: none;
+    transition: 0s;
+}
+
+

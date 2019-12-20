@@ -1,0 +1,132 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background: linear-gradient(to right, skyblue -50%, purple 150%);
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.buttonBack {
+    position: fixed;
+    font-size: 15px;
+    padding: 7px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    background: white;
+}
+.buttonBack:hover {
+    box-shadow: 0 0 6px 4px white;
+    transition: 0.7s;
+}
+.tableForm {
+    width: 900px;
+    height: 580px;
+    margin: 30px auto 30px auto;
+    background-color: white;
+    border: rgba(25, 73, 120, 0.5) solid 2px;
+}
+.table1 {
+    border-collapse: collapse;
+    margin: 20px auto 10px auto;
+    font-size: 0.9em;
+    width: 600px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.table1 caption {
+    padding: 6px 0 2px 10px;
+    text-align: left;
+    font-size: 20px;
+    background-color: #ac89f9;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+.table1 th,
+.table1 td {
+    padding: 10px 15px;
+}
+.table1 tr {
+    border-bottom: 1px solid #d6d6d6;
+    background: #f7f7f7;
+}
+.table1 tr:last-of-type {
+    border-bottom: 2px solid #ac89f9;
+}
+.table1 textarea{
+    resize: vertical;
+}
+
+.table2 {
+    border-collapse: collapse;
+    margin: 20px auto 30px auto;
+    font-size: 0.9em;
+    width: 600px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.table2 caption {
+    padding: 6px 0 2px 10px;
+    text-align: left;
+    font-size: 20px;
+    background-color: #ac89f9;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+.table2 th,
+.table2 td {
+    padding: 8px 15px;
+}
+.table2 tr {
+    border-bottom: 1px solid #dddddd;
+}
+.table2 tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.table2 tr:nth-of-type(odd) {
+    background-color: white;
+}
+.table2 tr:last-of-type {
+    border-bottom: 2px solid #ac89f9;
+}
+.table2 tr:hover {
+    background: #ab87ff;
+    color: white;
+    opacity: 0.4;
+    transition: 0.4s;
+}
+input:hover, textarea:hover, select:hover {
+    box-shadow: 0 0 6px 4px lightgrey;
+}
+input:focus, textarea:focus {
+    box-shadow: 0 0 6px 4px lightskyblue;
+}
+.buttons {
+    position: fixed;
+    margin: 2px;
+}
+.tableButtonS, .tableButtonC {
+    font-size: 18px;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background: white;
+}
+.tableButtonS:hover {
+    box-shadow: 0 0 6px 4px #00cc00;
+    background: #00cc00;
+    color: white;
+    transition: 0.7s;
+}
+.tableButtonC:hover {
+    box-shadow: 0 0 6px 4px red;
+    background: red;
+    color: white;
+    transition: 0.7s;
+}
